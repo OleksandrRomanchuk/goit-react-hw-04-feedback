@@ -2,9 +2,7 @@ import PropTypes from 'prop-types';
 import { capitalize } from 'utils/utilsFunc';
 import { FeedbackBtnsList, FeedbackBtn } from './FeedbackOptions.styled';
 
-export function FeedbackOptions(props) {
-    const { options, onLeaveFeedback } = props;
-
+export function FeedbackOptions({options, onLeaveFeedback}) {
     return <FeedbackBtnsList>
                 {options
             .map(option => <li

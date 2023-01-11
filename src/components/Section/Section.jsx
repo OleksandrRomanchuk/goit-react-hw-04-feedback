@@ -1,9 +1,7 @@
 import PropTypes from 'prop-types';
 import { AppSection, AppSectionTitle } from './Section.styled';
 
-export function Section (props) {
-    const { title, children } = props;
-
+export function Section ({title, children}) {
     return <AppSection>
                 <AppSectionTitle>{title}</AppSectionTitle>
                 {children}

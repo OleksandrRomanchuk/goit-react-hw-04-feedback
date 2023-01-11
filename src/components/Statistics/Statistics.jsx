@@ -1,8 +1,6 @@
 import PropTypes from 'prop-types';
 
-export function Statistics(props) {
-    const { good, neutral, bad, total, positivePercentage } = props;
-
+export function Statistics({good, neutral, bad, total, positivePercentage}) {
     return <>
                 <ul>
                     <li><p>Good:<span> {good}</span></p></li>
