@@ -34,19 +34,18 @@ class App extends Component {
     })
   };
 
-  // prevState[event.target.dataset.name] += 1
-
-
   render() {
     const { good, neutral, bad } = this.state;
 
     return (
     <FeedbackApp>
         <Section
-          title="Please leave feedback">
+          title="Please leave"
+          span=" feedback">
           <FeedbackOptions
             options={Object.keys(this.state)}
-            onLeaveFeedback={this.onLeaveFeedback} />
+            onLeaveFeedback={this.onLeaveFeedback}
+          />
         </Section>
         <Section
           title="Statistics">
