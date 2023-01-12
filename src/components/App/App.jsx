@@ -27,11 +27,19 @@ class App extends Component {
   };
 
   onLeaveFeedback = (event) => {
-    this.setState(prevState => prevState[event.target.dataset.name] += 1)
+    const optionFieldName = event.target.dataset.name;
+
+    this.setState(prevState => {
+      return {...prevState, [optionFieldName]: prevState[optionFieldName] += 1}
+    })
   };
+
+  // prevState[event.target.dataset.name] += 1
 
 
   render() {
+    const { good, neutral, bad } = this.state;
+
     return (
     <FeedbackApp>
         <Section
@@ -46,9 +54,9 @@ class App extends Component {
             ? <Notification
                 message="There is no feedback" />
             : <Statistics
-                good={this.state.good}
-                neutral={this.state.neutral}
-                bad={this.state.bad}
+                good={good}
+                neutral={neutral}
+                bad={bad}
                 total={this.countTotalFeedback()}
                 positivePercentage={this.countPositiveFeedbackPercentage()}
             />}
