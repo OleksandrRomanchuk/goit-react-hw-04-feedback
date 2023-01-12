@@ -2,12 +2,27 @@ import styled from "styled-components";
 
 export const AppSection = styled.section`
     display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 
-    padding: ${({theme}) => theme.space * 5}px 0;
+    min-width: 320px;
+    height: 250px;
+    
 `;
 
 export const AppSectionTitle = styled.h2`
-    font-size: ${({theme}) => theme.fontSizes[5]}px;
+    font-size: 32px;
+    font-weight: 400;
+`;
+
+export const TitleSpan = styled.span`
+    display: block;
+
+    font-size: 40px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-shadow: 0 0 5px #FFF, 0 0 15px #FFF, 0 0 20px #da37fb, 0 0 30px #da37fb, 0 0 40px #da37fb, 0 0 55px #da37fb, 0 0 75px #da37fb, 2px 2px 2px rgba(206,89,55,0);
 `;
