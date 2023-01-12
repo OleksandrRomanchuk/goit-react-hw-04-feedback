@@ -1,14 +1,20 @@
 import PropTypes from 'prop-types';
-import { AppSection, AppSectionTitle } from './Section.styled';
+import { AppSection, AppSectionTitle, TitleSpan } from './Section.styled';
 
-export function Section ({title, children}) {
+export function Section({ title, span, children}) {
     return <AppSection>
-                <AppSectionTitle>{title}</AppSectionTitle>
-                {children}
-            </AppSection>;
+                <AppSectionTitle>
+            {title}
+            <TitleSpan>
+                    {span}
+                </TitleSpan>
+                </AppSectionTitle>
+                    {children}
+            </AppSection>
 };
 
 Section.propTypes = {
     title: PropTypes.string.isRequired,
+    span: PropTypes.string,
     children: PropTypes.node,
 }
