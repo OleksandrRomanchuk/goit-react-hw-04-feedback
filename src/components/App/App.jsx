@@ -16,6 +16,14 @@ class App extends Component {
     bad: 0
   };
 
+  onLeaveFeedback = (event) => {
+    const optionFieldName = event.target.dataset.name;
+
+    this.setState(prevState => {
+      return {...prevState, [optionFieldName]: prevState[optionFieldName] += 1}
+    })
+  };
+
   countTotalFeedback() { 
     return Object.values(this.state).reduce((acc, value) => {
       return acc += value
@@ -24,14 +32,6 @@ class App extends Component {
 
   countPositiveFeedbackPercentage() {
     return Math.floor(this.state.good / this.countTotalFeedback() * 100);
-  };
-
-  onLeaveFeedback = (event) => {
-    const optionFieldName = event.target.dataset.name;
-
-    this.setState(prevState => {
-      return {...prevState, [optionFieldName]: prevState[optionFieldName] += 1}
-    })
   };
 
   render() {
@@ -47,11 +47,12 @@ class App extends Component {
             onLeaveFeedback={this.onLeaveFeedback}
           />
         </Section>
+        
         <Section
           title="Statistics">
           {!this.countTotalFeedback()
             ? <Notification
-                message="There is no feedback" />
+                message="There is no feedback." />
             : <Statistics
                 good={good}
                 neutral={neutral}
