@@ -6,31 +6,31 @@ import {
 
 export function Statistics({good, neutral, bad, total, positivePercentage}) {
     return <>
-                <FeedbackList>
-                    <li>
-                        <p>
-                            Good:
-                            <span> {good}</span>
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            Neutral:
-                            <span> {neutral}</span>
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            Bad:
-                            <span> {bad}</span>
-                        </p>
-                    </li>
-                </FeedbackList>
-                <FeedbackStatList>
-                    <li><p>Total:<span> {total}</span></p></li>
-                    <li><p>Positiv feedback:<span> {positivePercentage}%</span></p></li>
-                </FeedbackStatList>
-            </>
+        <FeedbackList>
+            <li>
+                <p>
+                    Good:
+                    <span> {good}</span>
+                </p>
+            </li>
+            <li>
+                <p>
+                    Neutral:
+                    <span> {neutral}</span>
+                </p>
+            </li>
+            <li>
+                <p>
+                    Bad:
+                    <span> {bad}</span>
+                </p>
+            </li>
+        </FeedbackList>
+        <FeedbackStatList>
+            <li><p>Total:<span> {total}</span></p></li>
+            <li><p>Positiv feedback:<span> {positivePercentage}%</span></p></li>
+        </FeedbackStatList>
+    </>;
 }
 
 Statistics.propTypes = {

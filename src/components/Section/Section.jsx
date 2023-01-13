@@ -3,14 +3,14 @@ import { AppSection, AppSectionTitle, TitleSpan } from './Section.styled';
 
 export function Section({ title, span, children}) {
     return <AppSection>
-                <AppSectionTitle>
-                    {title}
-                    <TitleSpan>
-                        {span}
-                    </TitleSpan>
-                </AppSectionTitle>
-                    {children}
-            </AppSection>
+        <AppSectionTitle>
+            {title}
+            <TitleSpan>
+                {span}
+            </TitleSpan>
+        </AppSectionTitle>
+        {children}
+    </AppSection>;
 };
 
 Section.propTypes = {

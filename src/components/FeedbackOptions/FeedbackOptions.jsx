@@ -4,17 +4,17 @@ import { FeedbackBtnsList, FeedbackBtn } from './FeedbackOptions.styled';
 
 export function FeedbackOptions({ options, onLeaveFeedback }) {
     return <FeedbackBtnsList>
-                {options
-                    .map(option => <li
-                        key={option}>
-                        <FeedbackBtn
-                            type="button"
-                            data-name={option}
-                            onClick={onLeaveFeedback}>
-                            {capitalize(option)}
-                        </FeedbackBtn>
-                    </li>)}
-            </FeedbackBtnsList>;
+        {options
+            .map(option => <li
+                key={option}>
+                <FeedbackBtn
+                    type="button"
+                    data-name={option}
+                    onClick={onLeaveFeedback}>
+                    {capitalize(option)}
+                </FeedbackBtn>
+            </li>)}
+    </FeedbackBtnsList>;
 };
 
 FeedbackOptions.propTypes = {
