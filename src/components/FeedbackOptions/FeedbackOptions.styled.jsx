@@ -21,8 +21,8 @@ export const FeedbackBtn = styled.button`
     transition: background-color 300ms ease, box-shadow 300ms ease;
 
     :hover, :focus {
-        background-color: #64e3ff;
+        background-color: #ffffff;
 
-        box-shadow: 0 0 16px #64e3ff;
+        box-shadow: 0 0 16px #ffffff;
     }
 `;
