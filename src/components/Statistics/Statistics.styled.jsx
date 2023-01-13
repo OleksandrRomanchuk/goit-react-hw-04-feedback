@@ -7,10 +7,7 @@ export const FeedbackList = styled.ul`
     font-size: 16px;
 `;
 
-export const FeedbackStatList = styled.ul`
-    display: grid;
-    gap: 8px;
-    
+export const FeedbackStatList = styled(FeedbackList)`
     font-size: 14px;
     color: #ffffff66;
 `;
