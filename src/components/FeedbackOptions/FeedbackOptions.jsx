@@ -5,18 +5,19 @@ import { FeedbackBtnsList, FeedbackBtn } from './FeedbackOptions.styled';
 export function FeedbackOptions({ options, onLeaveFeedback }) {
     return <FeedbackBtnsList>
                 {options
-            .map(option => <li
-                key={option}>
-                <FeedbackBtn
-                    type="button"
-                    data-name={option}
-                    onClick={onLeaveFeedback}>
-                    {capitalize(option)}
-                </FeedbackBtn></li>)}
+                    .map(option => <li
+                        key={option}>
+                        <FeedbackBtn
+                            type="button"
+                            data-name={option}
+                            onClick={onLeaveFeedback}>
+                            {capitalize(option)}
+                        </FeedbackBtn>
+                    </li>)}
             </FeedbackBtnsList>;
 };
 
 FeedbackOptions.propTypes = {
-    oprions: PropTypes.arrayOf(PropTypes.string),
+    options: PropTypes.arrayOf(PropTypes.string),
     onLeaveFeedback: PropTypes.func.isRequired,
 }
