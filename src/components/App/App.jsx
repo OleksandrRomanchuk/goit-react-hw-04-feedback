@@ -20,7 +20,7 @@ class App extends Component {
     const optionFieldName = event.target.dataset.name;
 
     this.setState(prevState => {
-      return {...prevState, [optionFieldName]: prevState[optionFieldName] += 1}
+      return {[optionFieldName]: prevState[optionFieldName] += 1}
     })
   };
 

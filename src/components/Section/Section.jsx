@@ -5,9 +5,9 @@ export function Section({ title, span, children}) {
     return <AppSection>
         <AppSectionTitle>
             {title}
-            <TitleSpan>
+            {span && <TitleSpan>
                 {span}
-            </TitleSpan>
+            </TitleSpan>}
         </AppSectionTitle>
         {children}
     </AppSection>;
