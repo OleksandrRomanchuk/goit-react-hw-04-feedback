@@ -1,4 +1,4 @@
-import { useState, useEffect} from "react";
+import { useState} from "react";
 
 //========== components ==========
 import { Section } from "components/Section/Section";
