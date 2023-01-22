@@ -17,4 +17,4 @@ Section.propTypes = {
     title: PropTypes.string.isRequired,
     span: PropTypes.string,
     children: PropTypes.node,
-}
+};
